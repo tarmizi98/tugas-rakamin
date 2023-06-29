@@ -1,3 +1,4 @@
+// random number
 function randomNumberArray(length) {
     const number = [];
     for (let i = 0; i < length; i++) {
@@ -10,6 +11,7 @@ function randomNumberArray(length) {
 let hasil = randomNumberArray(100)
 console.log(hasil)
 
+//split array
 function splitArray(array) {
     const genap = []
     const ganjil = []
@@ -26,6 +28,7 @@ function splitArray(array) {
 let splitArrayDone = splitArray(hasil)
 console.log(splitArrayDone)
 
+//min array
 function arrayMin(array) {
     let min = array[0]
     for (let i = 0; i < array.length; i++) {
@@ -41,6 +44,7 @@ console.log("array minimal ganjil\t= ", arrayGenapMin)
 let arrayGanjilMin = arrayMin( splitArrayDone[1])
 console.log("array minimal ganjil\t= ",arrayGanjilMin)
 
+//max array
 function arrayMax(array) {
     let max = array[0]
     for (let i = 0; i < array.length; i++) {
@@ -56,6 +60,7 @@ console.log("array maximal ganjil\t= ", arrayGenapMax)
 let arrayGanjilMax = arrayMax( splitArrayDone[1])
 console.log("array maximal ganjil\t= ",arrayGanjilMax)
 
+//total array
 function total(array) {
     let total = 0
     for (let i = 0; i < array.length; i++) {
@@ -69,6 +74,7 @@ console.log("total array genap\t= ", totalGenap)
 let totalGanjil = total(splitArrayDone[1])
 console.log("total array ganjil\t= ", totalGanjil)
 
+//average array
 function average(array) {
     return total(array) / array.length
 }
@@ -77,26 +83,30 @@ console.log("rata-rata ganjil\t= ", averageGenap)
 let averageGanjil = average(splitArrayDone[1])
 console.log("rata-rata ganjil\t= ", averageGanjil)
 
+//perbandingan min
 if (arrayGenapMin > arrayGanjilMin) {
     console.log("array genap min lebih besar dari array ganjil min")
 }else {
     console.log("array ganjil min lebih besar dari array genap min")
 }
 
+//perbandingan max
 if (arrayGenapMax > arrayGanjilMax) {
     console.log("array genap max lebih besar dari array ganjil max")
 }else {
     console.log("array ganjil max lebih besar dari array genap max")
 }
 
+//apakah total sama atau tidak
 if (totalGenap === totalGanjil) {
     console.log("total array genap sama dengan total ganjil")
 }else {
     console.log("total array genap tidak sama dengan total ganjil")
 }
 
-if (totalGenap > totalGanjil) {
-    console.log("total array genap lebih besar dari total array ganjil")
+//perbandingan rata-rata
+if (averageGenap > averageGanjil) {
+    console.log("rata-rata array genap lebih besar dari rata-rata array ganjil")
 }else {
-    console.log("total array ganjil lebih besar dari total array genap")
+    console.log("rata-rata array ganjil lebih besar dari rata-rata array genap")
 }
